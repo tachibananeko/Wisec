@@ -1,0 +1,40 @@
+// 字體顏色
+$txt_color: (
+    primary: #fff,
+    secondary: #6d6d6d,
+    gray: #b1afa4,
+    lightgray: #d6d4cb,
+    lightgray02: #96958d,
+    brown: #332f2c,
+    lightbrown: #b3ab96,
+    green: #736a49,
+    shadow: hsla(354, 29%, 7%, 0.8),
+);
+
+// 背景色
+$bg_color: (
+    primary: #f2efed,
+    secondary: #2b2725,
+    brown: #403d38,
+    brown_gradual: linear-gradient(to bottom, #2b2725 31px, #332f2c 32px, #332f2c 100%),
+    green: #736a49,
+    white: #fff,
+    shadow: rgba(0, 0, 0, .25),
+);
+
+// 按鈕色
+$btn_color: (
+    primary: #5f794c,
+);
+
+// 顏色class
+@each $name, $value in $txt_color {
+    .txt_#{$name} {
+        color: $value !important;
+    }
+}
+@each $name, $value in $bg_color {
+    .bg_#{$name} {
+        background: $value !important;
+    }
+}

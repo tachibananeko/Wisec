@@ -1,0 +1,14 @@
+@import "share_variable";
+@import "reset";
+@import "mixin";
+
+@import "layout_mixin"; //該站專屬mixin
+
+
+
+// layout
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Karla:wght@300;700&family=Prata&display=swap');
+@import "top_menu"; //上面menu
+@import "main"; //主內容
+
+

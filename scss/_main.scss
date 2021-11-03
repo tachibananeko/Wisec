@@ -1,0 +1,179 @@
+.main_width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background: map-get($bg_color, brown_gradual);
+
+    .info{
+        @include d_f(flex, center, flex-end);
+        height: 32px;
+        color: map-get($txt_color, lightgray02);
+        font-weight: 300;
+
+        li{
+            @extend %hand;
+            @include d_f(flex, center, flex-start);
+
+            & + li{
+                margin-left: 50px;
+            }
+
+            @include hoverHandler {
+                color: map-get($txt_color, lightgray);
+
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        i{
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+        }
+    }
+
+    .logo{
+        width: 150px;
+        height: 100px;
+        color: transparent;
+    }
+}
+
+main{
+    background: url(../images/img_benner01.jpg) no-repeat center left / cover;
+
+    .main__box{
+        @extend %txtshadow;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 5em 2em;
+        color: map-get($txt_color, white);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h2{
+        font-family: 'Cookie', cursive;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    h3{
+        font-family: 'Prata', serif;
+        font-size: 65px;
+        margin-bottom: 20px;
+    }
+    p{
+        line-height: 1.5;
+    }
+}
+
+.product{
+    padding: 3em 0;
+    box-shadow: 0 3px 5px map-get($bg_color, shadow) inset;
+    color: map-get($txt_color, secondary);
+    font-size: 16px;
+    line-height: 1.5;
+
+    section{
+        @include d_f(flex, unset, space-between);
+        flex-wrap: wrap;
+    }
+
+    .product__box{
+        @include d_f(flex, unset, space-between);
+        flex-wrap: wrap;
+        width: calc(100% / 3 - 30px);
+        margin-bottom: 50px;
+
+        // .product__box__txt
+        &__txt{
+            width: calc(75% - 20px);
+            h2 {
+                color: map-get($txt_color, brown);
+                font-family: 'Prata', cursive;
+                font-size: 20px;
+            }
+
+            h3 {
+                color: map-get($txt_color, green);
+                font-family: 'Cookie', cursive;
+                font-size: 30px;
+                letter-spacing: 2px;
+                margin-bottom: 5px;
+            }
+            li{
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            code{
+                margin-right: 5px;
+                font-weight: bold;
+            }
+        }
+
+        // .product__box__img
+        &__img {
+            width: 25%;
+        }
+    }
+
+    
+}
+
+.public{
+    padding: 12em 0;
+    min-height: 400px;
+    background: url(../images/img_benner02.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    
+}
+
+footer{    
+    padding: 4em 0 1em;
+    background: map-get($bg_color, secondary);
+
+    section{
+        @include d_f(flex, unset, space-between);
+        flex-wrap: wrap;
+        color: map-get($txt_color, lightbrown);
+        opacity: 0.8;
+    }
+
+    .list{
+        width: calc(100% / 4);
+        
+        li{
+            font-size: 15px;
+
+            &:first-child{
+                font-family: 'Prata', serif;
+                font-size: 16px;
+                line-height: 2;
+                border-bottom: 1px solid map-get($bg_color, brown);
+            }
+            &+li{
+                line-height: 1.5;
+                margin-top: 5px;
+            }
+
+            
+            a {
+                @include hoverHandler {
+                    color: map-get($txt_color, lightgray);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    p{  
+        width: 100%;
+        margin-top: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+}

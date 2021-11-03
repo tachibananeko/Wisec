@@ -1,0 +1,21 @@
+
+
+// icon設定
+$icon: (
+	'mem',
+	'tel',
+	'wine',
+	'flower',
+	'grass',
+	'mail',
+	'fb',
+	'twitter',
+	'ig',
+);
+
+@each $name in $icon {
+	.icon_#{$name} {
+		display: inline-block;
+		background:url(../images/icon_#{$name}.svg) no-repeat center / contain;
+	}
+}

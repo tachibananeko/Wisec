@@ -1,3 +1,9 @@
+h2{
+    font-family: 'Cookie', cursive;
+}
+h3{
+    font-family: 'Prata', serif;
+}
 .main_width {
     max-width: 1200px;
     margin: 0 auto;
@@ -47,10 +53,38 @@ header {
             margin-right: 5px;
         }
     }
+    .menu{
+        @include d_f(flex, center, space-between);
+        height: 100px;
 
+        @include mw_xs{
+            height: 50px;
+        }
+
+        &__list{
+            font-size: 0;
+            
+            li{
+                display: inline-block;
+                font-size: 16px;
+                color: map-get($txt_color, gray);
+
+                &+li{
+                    margin-left: 20px;
+                }
+            }
+
+            a {
+                @include hoverHandler {
+                    text-decoration: underline;
+                    color: map-get($txt_color, lightgray);
+                }
+            }
+        }
+    }
     .logo {
         width: 150px;
-        height: 100px;
+        height: 100%;
         color: transparent;
     }
 }
@@ -58,6 +92,7 @@ header {
 main {
     background: url(../images/img_benner01.jpg) no-repeat center left / cover;
 
+    // .main__box
     .main__box {
         @extend %txtshadow;
         max-width: 950px;
@@ -77,7 +112,6 @@ main {
     }
 
     h2 {
-        font-family: 'Cookie', cursive;
         font-size: 48px;
         margin-bottom: 20px;
 
@@ -88,7 +122,6 @@ main {
     }
 
     h3 {
-        font-family: 'Prata', serif;
         font-size: 65px;
         margin-bottom: 20px;
 
@@ -119,19 +152,21 @@ main {
     font-size: 16px;
     line-height: 1.5;
 
+
     section {
         @include d_f(flex, unset, space-between);
         flex-wrap: wrap;
     }
 
-    .product__box {
+    // .product__box
+    &__box{
         @include d_f(flex, unset, space-between);
-        flex-wrap: wrap;
-        width: calc(100% / 3 - 30px);
+        flex-direction: column;
+        width: calc(100% / 3 - 20px);
         margin-bottom: 50px;
 
         @include mw_md {
-            width: calc(100% / 2 - 30px);
+            width: calc(100% / 2 - 20px);
         }
 
         @include mw_xs {
@@ -141,24 +176,22 @@ main {
 
         // .product__box__txt
         &__txt {
-            width: calc(75% - 20px);
 
-            h2 {
+            h3 {
                 color: map-get($txt_color, brown);
                 font-family: 'Prata', cursive;
                 font-size: 20px;
             }
 
-            h3 {
+            h2 {
                 color: map-get($txt_color, green);
-                font-family: 'Cookie', cursive;
                 font-size: 30px;
                 letter-spacing: 2px;
                 margin-bottom: 5px;
             }
 
             li {
-                font-size: 14px;
+                font-size: 12px;
                 margin-bottom: 5px;
             }
 
@@ -166,11 +199,6 @@ main {
                 margin-right: 5px;
                 font-weight: bold;
             }
-        }
-
-        // .product__box__img
-        &__img {
-            width: 25%;
         }
     }
 
@@ -185,6 +213,55 @@ main {
 
     @include mw_xs {
         background-attachment: unset;
+    }
+}
+
+.mail{
+    padding: 5em 0;
+    background: url(../images/bg_cream.jpeg);
+    text-align: center;
+
+    h2{
+        color: map-get($txt_color, green);
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        color: map-get($txt_color, brown);
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    &__txt{
+        @include d_f(flex, unset, space-between);
+        max-width: 600px;
+        color: map-get($txt_color, secondary);
+        font-size: 18px;
+        margin: auto;
+        text-align: left;
+
+        li{
+            line-height: 1.5;
+            width: calc(100% / 2 - 20px);
+            &:first-child{
+                text-align: right;
+            }
+
+            i{
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+            
+            a {
+                @include hoverHandler {
+                    text-decoration: underline;
+                    color: map-get($txt_color, green);
+                }
+            }
+        }
+        
     }
 }
 

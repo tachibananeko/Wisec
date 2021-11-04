@@ -123,7 +123,7 @@ main {
         margin-bottom: 20px;
 
         @include mw_xs{
-            font-size: 30px;
+            font-size: 25px;
         }
     }
 
@@ -232,7 +232,7 @@ main {
     background: url(../images/img_benner02.jpg) no-repeat center / cover;
     background-attachment: fixed;
 
-    @include mw_xs {
+    @include coarse {
         background-attachment: unset;
     }
 }

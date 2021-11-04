@@ -156,7 +156,7 @@ main {
 
 
     section {
-        @include d_f(flex, unset, space-between);
+        @include d_f(flex, unset, flex-start);
         flex-wrap: wrap;
 
         >h3{
@@ -179,13 +179,14 @@ main {
 
     // .product__box
     &__box{
-        @include d_f(flex, unset, space-between);
+        @include d_f(flex, unset, flex-start);
         flex-direction: column;
-        width: calc(100% / 3 - 20px);
-        margin-bottom: 50px;
+        width: calc(100% / 3 - 40px);
+        margin: 0 20px 50px;
 
         @include mw_md {
-            width: calc(100% / 2 - 20px);
+            width: calc(100% / 2 - 60px);
+            margin: 0 30px 50px;
         }
 
         @include mw_xs {
@@ -206,7 +207,7 @@ main {
                 color: map-get($txt_color, green);
                 font-size: 25px;
             }
-
+            
             li {
                 font-size: 12px;
             }
@@ -219,6 +220,11 @@ main {
             p{
                 color: map-get($txt_color, lightbrown);
                 font-weight: bold;
+            }
+
+            @at-root .--single img{
+                display: block;
+                margin: auto;
             }
         }
     }

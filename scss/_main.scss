@@ -90,6 +90,10 @@ header {
         background: url(../images/Wisec_logo_W.svg) no-repeat center / contain;
         color: transparent;
 
+        img{
+            display: none;
+        }
+
         @include mw_xs{
             width: 100px;
         }
@@ -359,8 +363,8 @@ footer {
     }
 
     p {
-        padding-top: 50px;
         width: 100%;
+        padding-top: 50px;
         font-weight: bold;
         text-align: center;
     }

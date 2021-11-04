@@ -230,10 +230,9 @@ main {
     padding: 12em 0;
     min-height: 400px;
     background: url(../images/img_benner02.jpg) no-repeat center / cover;
-    background-attachment: fixed;
 
-    @include coarse {
-        background-attachment: unset;
+    @mixin fine {
+        background-attachment: fixed;
     }
 }
 

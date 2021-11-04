@@ -1,63 +1,64 @@
-.main_width{
+.main_width {
     max-width: 1200px;
     margin: 0 auto;
 
-    @include mw_lg{
+    @include mw_lg {
         padding: 0 3em;
     }
-    @include mw_xs{
+
+    @include mw_xs {
         padding: 0 10px;
     }
 }
 
-header{
+header {
     background: map-get($bg_color, brown_gradual);
 
-    .info{
+    .info {
         @include d_f(flex, center, flex-end);
         height: 32px;
         color: map-get($txt_color, lightgray02);
         font-weight: 300;
 
-        @include mw_xs{
+        @include mw_xs {
             justify-content: space-between;
         }
 
-        li{
+        li {
             @extend %hand;
             @include d_f(flex, center, flex-start);
 
-            & + li{
+            &+li {
                 margin-left: 50px;
             }
 
             @include hoverHandler {
                 color: map-get($txt_color, lightgray);
 
-                a{
+                a {
                     text-decoration: underline;
                 }
             }
         }
 
-        i{
+        i {
             width: 12px;
             height: 12px;
             margin-right: 5px;
         }
     }
 
-    .logo{
+    .logo {
         width: 150px;
         height: 100px;
         color: transparent;
     }
 }
 
-main{
+main {
     background: url(../images/img_benner01.jpg) no-repeat center left / cover;
 
-    .main__box{
+    .main__box {
         @extend %txtshadow;
         max-width: 950px;
         margin: 0 auto;
@@ -66,80 +67,82 @@ main{
         font-size: 20px;
         text-align: center;
 
-        @include mw_md{
+        @include mw_md {
             padding: 2em;
         }
 
-        @include mw_xs{
+        @include mw_xs {
             padding: 1em;
         }
     }
 
-    h2{
+    h2 {
         font-family: 'Cookie', cursive;
         font-size: 48px;
         margin-bottom: 20px;
-        
-        @include mw_md{
+
+        @include mw_md {
             font-size: 40px;
             margin-bottom: 10px;
         }
     }
 
-    h3{
+    h3 {
         font-family: 'Prata', serif;
         font-size: 65px;
         margin-bottom: 20px;
 
-        @include mw_md{
+        @include mw_md {
             font-size: 55px;
             margin-bottom: 10px;
         }
 
-        @include mw_xs{
+        @include mw_xs {
             font-size: 30px;
         }
     }
-    p{
+
+    p {
         line-height: 1.5;
 
-        @include mw_xs{
+        @include mw_xs {
             @include omission(10, 400px);
             font-size: 16px;
         }
     }
 }
 
-.product{
+.product {
     padding: 3em 0;
     box-shadow: 0 3px 5px map-get($bg_color, shadow) inset;
     color: map-get($txt_color, secondary);
     font-size: 16px;
     line-height: 1.5;
 
-    section{
+    section {
         @include d_f(flex, unset, space-between);
         flex-wrap: wrap;
     }
 
-    .product__box{
+    .product__box {
         @include d_f(flex, unset, space-between);
         flex-wrap: wrap;
         width: calc(100% / 3 - 30px);
         margin-bottom: 50px;
 
-        @include mw_md{
+        @include mw_md {
             width: calc(100% / 2 - 30px);
         }
 
-        @include mw_xs{
+        @include mw_xs {
             width: calc(100% - 40px);
             margin: 0 auto 50px;
         }
 
         // .product__box__txt
-        &__txt{
+        &__txt {
             width: calc(75% - 20px);
+
             h2 {
                 color: map-get($txt_color, brown);
                 font-family: 'Prata', cursive;
@@ -153,11 +156,13 @@ main{
                 letter-spacing: 2px;
                 margin-bottom: 5px;
             }
-            li{
+
+            li {
                 font-size: 14px;
                 margin-bottom: 5px;
             }
-            code{
+
+            code {
                 margin-right: 5px;
                 font-weight: bold;
             }
@@ -169,53 +174,56 @@ main{
         }
     }
 
-    
+
 }
 
-.public{
+.public {
     padding: 12em 0;
     min-height: 400px;
     background: url(../images/img_benner02.jpg) no-repeat center / cover;
     background-attachment: fixed;
-    
+
+    @include mw_xs {
+        background-attachment: unset;
+    }
 }
 
-footer{    
+footer {
     padding: 4em 0 1em;
     background: map-get($bg_color, secondary);
     overflow: hidden;
 
-    section{
+    section {
         @include d_f(flex, unset, space-between);
         flex-wrap: wrap;
         color: map-get($txt_color, lightbrown);
         opacity: 0.8;
     }
 
-    .list{
+    .list {
         width: calc(100% / 4);
-        margin-bottom: 50px;
 
-        @include mw_xs{
+        @include mw_xs {
             width: calc(100% - 40px);
             margin: 0 auto 50px;
         }
-        
-        li{
+
+        li {
             font-size: 15px;
 
-            &:first-child{
+            &:first-child {
                 font-family: 'Prata', serif;
                 font-size: 16px;
                 line-height: 2;
                 border-bottom: 1px solid map-get($bg_color, brown);
             }
-            &+li{
+
+            &+li {
                 line-height: 1.5;
                 margin-top: 5px;
             }
 
-            
+
             a {
                 @include hoverHandler {
                     color: map-get($txt_color, lightgray);
@@ -224,7 +232,9 @@ footer{
             }
         }
     }
-    p{  
+
+    p {
+        padding-top: 50px;
         width: 100%;
         font-weight: bold;
         text-align: center;

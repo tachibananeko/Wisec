@@ -22,7 +22,7 @@ header {
 
     .info {
         @include d_f(flex, center, flex-end);
-        height: 32px;
+        height: 30px;
         color: map-get($txt_color, lightgray02);
         font-weight: 300;
 
@@ -58,7 +58,7 @@ header {
         height: 100px;
 
         @include mw_xs{
-            height: 50px;
+            height: 80px;
         }
 
         &__list{
@@ -83,9 +83,14 @@ header {
         }
     }
     .logo {
-        width: 150px;
+        width: 190px;
         height: 100%;
+        background: url(../images/Wisec_logo_W.svg) no-repeat center / contain;
         color: transparent;
+
+        @include mw_xs{
+            width: 100px;
+        }
     }
 }
 
@@ -199,6 +204,11 @@ main {
                 margin-right: 5px;
                 font-weight: bold;
             }
+
+            p{
+                color: map-get($txt_color, green);
+                font-weight: bold;
+            }
         }
     }
 
@@ -221,18 +231,30 @@ main {
     background: url(../images/bg_cream.jpeg);
     text-align: center;
 
-    h2{
-        color: map-get($txt_color, green);
-        font-size: 48px;
-        margin-bottom: 10px;
+    @include mw_xs {
+        padding: 2em 0;
+    }
+
+    // .mail__logo
+    &__logo{
+        width: 180px;
+        height: 80px;
+        background: url(../images/Wisec_logo_B.svg) no-repeat center / contain;
+        color: transparent;
+        margin: 0 auto 30px;
     }
 
     h3{
-        color: map-get($txt_color, brown);
+        color: map-get($txt_color, green);
         font-size: 40px;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
+
+        @include mw_xs {
+            font-size: 30px;
+        }
     }
 
+    // .mail__txt
     &__txt{
         @include d_f(flex, unset, space-between);
         max-width: 600px;
@@ -241,9 +263,18 @@ main {
         margin: auto;
         text-align: left;
 
+        @include mw_xs {
+            font-size: 12px;
+        }
+
         li{
             line-height: 1.5;
             width: calc(100% / 2 - 20px);
+
+            @include mw_xs {
+                width: calc(100% / 2 - 5px);
+            }
+
             &:first-child{
                 text-align: right;
             }

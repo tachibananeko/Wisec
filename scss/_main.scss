@@ -87,7 +87,7 @@ header {
     .logo {
         width: 190px;
         height: 100%;
-        background: url(../images/Wisec_logo_W.svg) no-repeat center / contain;
+        background: url(https://tachibananeko.github.io/WisecPteLtd/images/Wisec_logo_W.svg) no-repeat center / contain;
         color: transparent;
 
         img{
@@ -100,8 +100,8 @@ header {
     }
 }
 
-main {
-    background: url(../images/img_benner01.jpg) no-repeat center left / cover;
+.main {
+    background: url(https://tachibananeko.github.io/WisecPteLtd/images/img_benner01.jpg) no-repeat center left / cover;
 
     // .main__box
     .main__box {
@@ -239,7 +239,7 @@ main {
 .public {
     padding: 12em 0;
     min-height: 400px;
-    background: url(../images/img_benner02.jpg) no-repeat center / cover;
+    background: url(https://tachibananeko.github.io/WisecPteLtd/images/img_benner02.jpg) no-repeat center / cover;
 
     @mixin fine {
         background-attachment: fixed;
@@ -248,7 +248,7 @@ main {
 
 .mail{
     padding: 5em 0;
-    background: url(../images/bg_cream.jpeg);
+    background: url(https://tachibananeko.github.io/WisecPteLtd/images/bg_cream.jpeg);
     text-align: center;
 
     @include mw_xs {
@@ -259,7 +259,7 @@ main {
     &__logo{
         width: 180px;
         height: 80px;
-        background: url(../images/Wisec_logo_B.svg) no-repeat center / contain;
+        background: url(https://tachibananeko.github.io/WisecPteLtd/images/Wisec_logo_B.svg) no-repeat center / contain;
         color: transparent;
         margin: 0 auto 30px;
     }
@@ -368,4 +368,8 @@ footer {
         font-weight: bold;
         text-align: center;
     }
+}
+
+.entry-footer{
+    display: none;
 }
